@@ -230,6 +230,34 @@
 
     .hero-body { padding: 18px 20px 20px; }
 
+    .character-profile {
+      display: grid;
+      grid-template-columns: minmax(280px, .78fr) minmax(0, 1.22fr);
+      gap: 20px;
+      align-items: start;
+    }
+
+    .character-visual {
+      margin: 0;
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      overflow: hidden;
+      background: #17191d;
+    }
+
+    .character-visual img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .character-visual figcaption {
+      padding: 8px 10px;
+      border-top: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: 12px;
+    }
+
     .specs {
       display: grid;
       grid-template-columns: 160px 1fr;
@@ -352,7 +380,8 @@
     @media (max-width: 820px) {
       .grid.two,
       .grid.three,
-      .ability-grid { grid-template-columns: 1fr; }
+      .ability-grid,
+      .character-profile { grid-template-columns: 1fr; }
       .specs { grid-template-columns: 1fr; gap: 2px; }
       .specs dt { margin-top: 8px; }
       .title { letter-spacing: -0.04em; }
@@ -467,27 +496,34 @@
           <div class="hero-role">Supportive damage · stealth skirmisher · close range</div>
         </div>
         <div class="hero-body">
-          <dl class="specs">
-            <dt>Theme</dt><dd>Y2K / emo / scene-inspired bat rogue</dd>
-            <dt>Personality</dt><dd>Cute, quirky, deceptive, playful</dd>
-            <dt>Hair</dt><dd>Blonde, short asymmetrical cut</dd>
-            <dt>Outfit</dt><dd>Baggy black weather-resistant hoodie, shorts, tall boots</dd>
-            <dt>Weapon</dt><dd>Oversized handheld claw-knuckles / katar-style fist weapons</dd>
-            <dt>Dart storage</dt><dd>Visible holders on tall boots</dd>
-            <dt>Movement</dt><dd>Airy, smoky, fast, light</dd>
-            <dt>Rig</dt><dd>Hero-specific rig and animation set; skins reuse Silky's rig and animations</dd>
-          </dl>
+          <div class="character-profile">
+            <figure class="character-visual">
+              <img src="images/silky_neon_batblade_concept_sheet.png" alt="Silky visual reference concept sheet" />
+              <figcaption>Visual reference. Final character model and costume design TBD.</figcaption>
+            </figure>
+
+            <dl class="specs">
+              <dt>Theme</dt><dd>Y2K / emo / scene-inspired bat rogue</dd>
+              <dt>Personality</dt><dd>Cute, bubbly, quirky, deceptive, playful</dd>
+              <dt>Hair</dt><dd>Blonde, short asymmetrical cut</dd>
+              <dt>Outfit</dt><dd>Baggy black weather-resistant hoodie, shorts, tall boots</dd>
+              <dt>Weapon</dt><dd>Dual oversized handheld glaives</dd>
+              <dt>Dart storage</dt><dd>Visible poison and healing dart holders on tall boots</dd>
+              <dt>Movement</dt><dd>Airy, smoky, fast, light</dd>
+              <dt>Rig</dt><dd>Hero-specific rig and animation set; skins reuse Silky's rig and animations</dd>
+            </dl>
+          </div>
 
           <div class="ability-grid">
             <div class="ability">
               <span class="key">PRIMARY</span>
-              <strong>Scratch</strong>
-              <p>Fast close-range claw attacks.</p>
+              <strong>Glaive Slash</strong>
+              <p>Fast close-range glaive attacks.</p>
             </div>
             <div class="ability">
               <span class="key">SECONDARY</span>
               <strong>Smoke Lunge</strong>
-              <p>Lunging AoE melee strike that also functions as mobility.</p>
+              <p>Lunging AoE glaive strike that also functions as mobility.</p>
             </div>
             <div class="ability">
               <span class="key">ABILITY 1</span>
@@ -553,7 +589,7 @@
             <tr><th>Hero</th><th>Weapon</th><th>Range</th><th>Notes</th></tr>
           </thead>
           <tbody>
-            <tr><td>Silky</td><td>Oversized claw-knuckles / katar-style fist weapons</td><td>Close</td><td>Handheld, not biological attachments. Built around fast slashing and lunge movement.</td></tr>
+            <tr><td>Silky</td><td>Dual oversized handheld glaives</td><td>Close</td><td>Built around fast slashing and lunge movement.</td></tr>
             <tr><td>TBD</td><td>TBD</td><td>TBD</td><td>TBD</td></tr>
           </tbody>
         </table>
